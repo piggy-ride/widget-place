@@ -1,6 +1,8 @@
 # Backend
 
-## Venv Activation
+## Running the backend
+
+### Venv Activation
 
 ```bash
 # Windows
@@ -13,14 +15,34 @@
 $ source .venv/bin/activate
 ```
 
-## Install dependencies
+### Install dependencies
 
 ```bash
 uv pip install
 ```
 
-## Running the backend
+### Running the backend
 
 ```bash
 uvicorn main:app --reload
+```
+
+## Database Migrations
+
+### Create a migration
+
+```bash
+alembic revision --autogenerate -m "migration message"
+```
+
+### Apply migrations
+
+```bash
+alembic upgrade head
+```
+
+### Rollback migrations
+
+```bash
+alembic downgrade -1
 ```
