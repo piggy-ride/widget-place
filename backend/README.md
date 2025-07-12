@@ -2,6 +2,19 @@
 
 ## Running the backend
 
+### Prerequisites
+
+```bash
+# Install UV
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### Create Virtual Environment
+
+```bash
+uv venv
+```
+
 ### Venv Activation
 
 ```bash
@@ -12,13 +25,13 @@
 .venv\Scripts\Activate.ps1
 
 # Unix
-$ source .venv/bin/activate
+source .venv/bin/activate
 ```
 
 ### Install dependencies
 
 ```bash
-uv pip install
+uv sync
 ```
 
 ### Running the backend
